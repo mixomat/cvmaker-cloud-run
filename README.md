@@ -1,6 +1,6 @@
 # Cloud Run Setup for cvmaker
 
-Description of setup steps to get cvmaker deployed on [Google Cloud Run](https://cloud.google.com/run) serverless platform.
+Description of setup steps to get [cvmaker](https://github.com/mixomat/cvmaker) deployed on [Google Cloud Run](https://cloud.google.com/run) serverless platform.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ containerregistry.googleapis.com
 docker build -t gcr.io/${PROJECT_ID}/${SERVICE_NAME} .
 docker push gcr.io/${PROJECT_ID}/${SERVICE_NAME}
 ```
-6. Run service in Google Cloud Run
+6. Run service in Google Cloud Run:
 ```shell
 gcloud run deploy ${SERVICE_NAME} \
 --image gcr.io/${PROJECT_ID}/${SERVICE_NAME} \
